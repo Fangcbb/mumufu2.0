@@ -1,2 +1,4 @@
-// Placeholder export file for shared UI primitives in upcoming phases.
-export {};
+export { ProjectCard } from "./project-card";
+export { SectionHeading } from "./section-heading";
+export { SiteFooter } from "./site-footer";
+export { SiteHeader } from "./site-header";

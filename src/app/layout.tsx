@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
+import { SiteFooter, SiteHeader } from "@/components/common";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -39,7 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable} h-full antialiased`}>
-      <body className="min-h-full bg-ink text-sand">{children}</body>
+      <body className="flex min-h-full flex-col bg-ink text-sand">
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
