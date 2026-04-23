@@ -1,41 +1,49 @@
-# AGENTS.md
+# Mumufu Studio Website
 
-## Project goal
-Build a premium, minimal, high-end portfolio/showcase website inspired by the restrained atmosphere of unveil.fr, but do not copy it literally. The result must feel original, elegant, and production-ready.
+Phase 1 foundation for a high-end, restrained, immersive showcase site built with **Next.js (App Router) + TypeScript + Tailwind CSS**.
 
-## Technical stack
-- Use Next.js App Router + TypeScript
-- Use Tailwind CSS
-- Use minimal dependencies
-- First phase: no Three.js, no WebGL, no shaders
-- Keep the project easy to deploy on Vercel
+## Tech Stack
 
-## Design rules
-- Minimal, refined, editorial, high-end
-- Strong spacing and typography
-- Large visual sections
-- Motion should be subtle, not flashy
-- Avoid template-like UI
-- Avoid noisy gradients, glowing cards, glassmorphism overload
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- ESLint + Prettier
 
-## Engineering rules
-- Work in small phases
-- One PR per phase
-- Keep changes minimal and focused
-- Ensure `npm run build` passes before opening a PR
-- Do not modify unrelated files
-- Prefer stable, simple implementations
+## Scripts
 
-## Phase order
-1. Initialize project foundation
-2. Build static page structure without animation
-3. Add subtle motion and polish
-4. Improve responsiveness and details
-5. Prepare for deployment
+```bash
+npm run dev         # start development server
+npm run lint        # run eslint
+npm run typecheck   # run TypeScript checks
+npm run format      # check prettier formatting
+npm run build       # production build
+```
 
-## Output requirements
-For each task:
-1. Summarize what changed
-2. List files changed
-3. Explain how to verify
-4. Mention risks or follow-ups
+## Directory Structure (Phase 1)
+
+```text
+src/
+  app/
+    globals.css          # global tokens, baseline styles
+    layout.tsx           # root layout + base metadata
+    page.tsx             # temporary phase entry page
+  components/
+    common/              # shared presentational components (planned)
+    layout/
+      page-shell.tsx     # reusable max-width layout wrapper
+  config/
+    site.ts              # centralized site settings + navigation config
+  content/               # content-layer files (planned)
+  lib/                   # reusable utils/helpers (planned)
+```
+
+## Phase Status
+
+- ✅ Phase 1: project initialization and baseline design system
+- ⏳ Phase 2: static page structure (Home / About / Work / Project / Contact / 404)
+- ⏳ Phase 3+: motion, polish, and launch prep
+
+## Repository Asset Policy (Current PR)
+
+This PR is intentionally **text-only/source-only** and does not include favicon or other binary/static media assets.
+
