@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProjectCard, SectionHeading } from "@/components/common";
+import { SpatialHero } from "@/components/hero/spatial-hero";
 import { PageShell } from "@/components/layout/page-shell";
 import { homeContent } from "@/content";
 import { getSelectedProjects } from "@/lib";
@@ -11,15 +12,7 @@ export default function Home() {
     <main className="flex-1 py-20 md:py-28">
       <PageShell>
         <div className="space-y-[var(--space-section)]">
-          <section className="max-w-4xl space-y-8">
-            <p className="text-xs tracking-[0.24em] text-sand-soft uppercase">
-              {homeContent.hero.eyebrow}
-            </p>
-            <h1 className="text-balance text-5xl leading-[1.02] font-medium md:text-7xl">
-              {homeContent.hero.title}
-            </h1>
-            <p className="max-w-2xl text-lg text-sand-soft">{homeContent.hero.blurb}</p>
-          </section>
+          <SpatialHero />
 
           <section className="border-t border-line pt-14 md:pt-20">
             <SectionHeading title={homeContent.manifesto.title} />
