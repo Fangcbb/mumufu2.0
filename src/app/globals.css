@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/*
+  Core design tokens for the entire site.
+  These are intentionally minimal and scalable for future CMS-driven content.
+*/
+:root {
+  --color-ink: #0f0f10;
+  --color-ink-soft: #161619;
+  --color-sand: #f4f1ea;
+  --color-sand-soft: #cbc8c2;
+  --color-line: rgba(244, 241, 234, 0.16);
+
+  --space-section: clamp(5rem, 10vw, 10rem);
+  --space-content: clamp(1.25rem, 2.6vw, 2.5rem);
+
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+
+  --shadow-soft: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+@theme inline {
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-inter);
+
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-sand: var(--color-sand);
+  --color-sand-soft: var(--color-sand-soft);
+  --color-line: var(--color-line);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    var(--font-manrope),
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.5;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  color: var(--color-ink);
+  background: var(--color-sand);
+}
