@@ -1,6 +1,6 @@
 # Mumufu Studio Website
 
-Phase 1 foundation for a high-end, restrained, immersive showcase site built with **Next.js (App Router) + TypeScript + Tailwind CSS**.
+Phase 2 static structure for a high-end, restrained, immersive showcase site built with **Next.js (App Router) + TypeScript + Tailwind CSS**.
 
 ## Tech Stack
 
@@ -19,31 +19,32 @@ npm run format      # check prettier formatting
 npm run build       # production build
 ```
 
-## Directory Structure (Phase 1)
+## Directory Structure
 
 ```text
 src/
   app/
-    globals.css          # global tokens, baseline styles
-    layout.tsx           # root layout + base metadata
-    page.tsx             # temporary phase entry page
+    layout.tsx           # root layout + metadata + global header/footer
+    page.tsx             # home page
+    about/page.tsx       # about page
+    work/page.tsx        # work index
+    work/[slug]/page.tsx # static project detail pages
+    contact/page.tsx     # contact page
+    not-found.tsx        # 404 page
   components/
-    common/              # shared presentational components (planned)
+    common/              # reusable typography/layout section components
     layout/
-      page-shell.tsx     # reusable max-width layout wrapper
+      page-shell.tsx     # max-width layout wrapper
   config/
-    site.ts              # centralized site settings + navigation config
-  content/               # content-layer files (planned)
-  lib/                   # reusable utils/helpers (planned)
+    site.ts              # site settings + navigation config
+  content/
+    index.ts             # mock data for home/about/work/contact
+  lib/
+    index.ts             # content query helpers
 ```
 
 ## Phase Status
 
 - ✅ Phase 1: project initialization and baseline design system
-- ⏳ Phase 2: static page structure (Home / About / Work / Project / Contact / 404)
+- ✅ Phase 2: static page structure (Home / About / Work / Project / Contact / 404)
 - ⏳ Phase 3+: motion, polish, and launch prep
-
-## Repository Asset Policy (Current PR)
-
-This PR is intentionally **text-only/source-only** and does not include favicon or other binary/static media assets.
-

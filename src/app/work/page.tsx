@@ -1,13 +1,23 @@
+import { ProjectCard, SectionHeading } from "@/components/common";
 import { PageShell } from "@/components/layout/page-shell";
+import { projects } from "@/content";
 
 export default function WorkPage() {
   return (
-    <main className="flex-1 py-24 md:py-32">
+    <main className="flex-1 py-20 md:py-28">
       <PageShell>
-        <section className="space-y-4">
-          <p className="text-xs tracking-[0.24em] text-sand-soft uppercase">Phase 1</p>
-          <h1 className="text-4xl leading-tight font-medium md:text-5xl">Work</h1>
-          <p className="max-w-2xl text-base text-sand-soft">Placeholder work listing page scaffold.</p>
+        <section className="space-y-12">
+          <SectionHeading
+            eyebrow="Work"
+            title="Selected projects across editorial, brand, and product contexts."
+            description="A curated index of recent website and digital identity collaborations."
+          />
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
         </section>
       </PageShell>
     </main>
